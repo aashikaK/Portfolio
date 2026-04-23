@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #0a0a0f;
+    color: #fff;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background: rgba(0,0,0,0.6);
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    color: #8a7dff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #ccc;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #8a7dff;
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 50px;
+}
+
+.hero-text h1 {
+    font-size: 40px;
+}
+
+.hero-text span {
+    color: #8a7dff;
+}
+
+.tagline {
+    margin: 15px 0;
+    color: #aaa;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    background: #8a7dff;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.btn-outline {
+    border: 1px solid #8a7dff;
+    padding: 10px 20px;
+    color: #8a7dff;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+/* HERO IMAGE */
+.hero-img img {
+    width: 250px;
+    border-radius: 50%;
+    box-shadow: 0 0 30px #8a7dff;
+}
+
+/* SECTION */
+.section {
+    padding: 60px 50px;
+}
+
+.section h2 {
+    margin-bottom: 20px;
+    color: #8a7dff;
+}
+
+/* SKILLS */
+.skill {
+    margin-bottom: 15px;
+}
+
+.bar {
+    width: 100%;
+    height: 8px;
+    background: #222;
+    border-radius: 10px;
+}
+
+.fill {
+    height: 100%;
+    border-radius: 10px;
+}
+
+.html { width: 85%; background: #8a7dff; }
+.css { width: 80%; background: #8a7dff; }
+.js { width: 60%; background: #8a7dff; }
+.python { width: 70%; background: #8a7dff; }
+.django { width: 50%; background: #8a7dff; }
+
+/* PROJECTS */
+.projects {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #111;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px #8a7dff;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #8a7dff;
+}
+
+/* CONTACT */
+.contact-links a {
+    margin-right: 15px;
+    color: #8a7dff;
+    text-decoration: none;
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-img {
+        margin-top: 20px;
+    }
+
+    .projects {
+        justify-content: center;
+    }
+}
