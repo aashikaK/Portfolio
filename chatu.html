@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Aashika Khatiwada — Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#0b0b12;
+  --card:#141420;
+  --text:#f1f1f7;
+  --muted:#8a8aa3;
+  --accent:#7c6cff;
+  --accent2:#ff6b9a;
+  --border:rgba(255,255,255,0.08);
+}
+
+.light{
+  --bg:#f6f7fb;
+  --card:#ffffff;
+  --text:#111;
+  --muted:#555;
+  --accent:#6c5cff;
+  --accent2:#ff4f7a;
+  --border:rgba(0,0,0,0.08);
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  transition:.3s;
+}
+
+/* NAV */
+nav{
+  position:fixed;
+  width:100%;
+  top:0;
+  display:flex;
+  justify-content:space-between;
+  padding:1rem 2rem;
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--border);
+}
+
+.logo{
+  font-family:'Syne';
+  font-weight:800;
+}
+
+.nav-links{
+  display:flex;
+  gap:1.5rem;
+  align-items:center;
+}
+
+.nav-links a{
+  text-decoration:none;
+  color:var(--muted);
+  font-size:.85rem;
+}
+
+.theme-btn{
+  border:1px solid var(--border);
+  padding:.4rem .9rem;
+  border-radius:20px;
+  cursor:pointer;
+}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:6rem 2rem;
+}
+
+.hero h1{
+  font-family:'Syne';
+  font-size:clamp(2.5rem,6vw,5rem);
+}
+
+.hero span{
+  color:var(--accent);
+}
+
+.hero p{
+  margin-top:1rem;
+  color:var(--muted);
+  max-width:450px;
+}
+
+.btn{
+  margin-top:2rem;
+  display:inline-block;
+  padding:.7rem 1.6rem;
+  border-radius:6px;
+  text-decoration:none;
+}
+
+.primary{
+  background:var(--accent);
+  color:white;
+}
+
+.ghost{
+  border:1px solid var(--border);
+  margin-left:10px;
+}
+
+/* SECTION */
+section{
+  padding:4rem 2rem;
+  border-top:1px solid var(--border);
+}
+
+h2{
+  font-family:'Syne';
+  margin-bottom:2rem;
+}
+
+/* CARDS */
+.grid{
+  display:grid;
+  gap:1.2rem;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+}
+
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  padding:1.5rem;
+  border-radius:12px;
+  transition:.2s;
+}
+
+.card:hover{
+  transform:translateY(-4px);
+  border-color:var(--accent);
+}
+
+/* SKILL BAR */
+.bar{
+  height:4px;
+  background:var(--border);
+  margin-top:6px;
+}
+
+.fill{
+  height:100%;
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+}
+
+/* FOOTER */
+footer{
+  padding:2rem;
+  text-align:center;
+  font-size:.8rem;
+  color:var(--muted);
+}
+</style>
+</head>
+
+<body id="body">
+
+<nav>
+  <div class="logo">AK.</div>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <button class="theme-btn" onclick="toggleTheme()">🌙</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>Aashika <br><span>Khatiwada</span></h1>
+  <p>
+    Consistently learning, building, and improving with every project.
+    Focused on backend systems and practical applications.
+  </p>
+
+  <a href="#projects" class="btn primary">View Work</a>
+  <a href="#contact" class="btn ghost">Contact</a>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2>About</h2>
+  <p>
+    BCA student from Nepal. I build systems like Gym Management and Security Systems.
+    I enjoy backend development using Python & Django and solving real problems.
+  </p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <h2>Skills</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      HTML & CSS
+      <div class="bar"><div class="fill" style="width:85%"></div></div>
+    </div>
+
+    <div class="card">
+      JavaScript
+      <div class="bar"><div class="fill" style="width:70%"></div></div>
+    </div>
+
+    <div class="card">
+      Python & Django
+      <div class="bar"><div class="fill" style="width:68%"></div></div>
+    </div>
+
+    <div class="card">
+      Java
+      <div class="bar"><div class="fill" style="width:75%"></div></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <h2>Projects</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>Gym Management System</h3>
+      <p>Handles members, records, and management logic.</p>
+    </div>
+
+    <div class="card">
+      <h3>Security Management System</h3>
+      <p>System for monitoring and managing security data.</p>
+    </div>
+
+    <div class="card">
+      <h3>Expense Tracker</h3>
+      <p>Tracks daily expenses and categories.</p>
+    </div>
+
+    <div class="card">
+      <h3>Interactive Story Game</h3>
+      <p>Simple logic-based story game using conditions.</p>
+    </div>
+
+    <div class="card">
+      <h3>Music App</h3>
+      <p>Basic media interface with simple features.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
+
+  <p>Email: khatiwadaaashika12@email.com</p>
+  <p>GitHub: yourusername</p>
+  <p>LinkedIn: Aashika Khatiwada</p>
+</section>
+
+<footer>
+  © 2026 Aashika Khatiwada
+</footer>
+
+<script>
+let light=false;
+
+function toggleTheme(){
+  light=!light;
+  document.body.className=light?"light":"";
+}
+</script>
+
+</body>
+</html>
